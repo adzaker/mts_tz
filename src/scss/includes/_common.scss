@@ -1,0 +1,27 @@
+body {
+  background: $gray-100;
+  font-size: 14px;
+  font-family: 'MTS', 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.colorRed {
+  color: $red;
+  font-weight: inherit;
+  font-style: inherit;
+  text-align: inherit;
+}
+
+.colorBlue {
+  color: $blue;
+  font-weight: inherit;
+  font-style: inherit;
+  text-align: inherit;
+}
