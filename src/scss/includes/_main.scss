@@ -1,0 +1,61 @@
+.main {
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+
+  &__search {
+    width: $width-card;
+    height: 44px;
+    margin-bottom: 24px;
+    position: relative;
+
+    [type="submit"] {
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+    }
+
+    #search {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border: 2px solid $gray-500;
+      border-radius: 4px;
+      padding-left: 48px;
+      color: $gray-900;
+
+      &::placeholder {
+        color: $gray-700;
+        font-size: 14px;
+        font-family: 'MTS', 'Roboto', sans-serif;
+      }
+    }
+
+    .searchIcon {
+      position: absolute;
+      left: 20px;
+      top: 14px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid $gray-700;
+
+      &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        background-color: $gray-700;
+        width: 7px;
+        transform: rotate(45deg);
+        top: 10px;
+        right: -5px;
+      }
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -12px;
+  }
+}
