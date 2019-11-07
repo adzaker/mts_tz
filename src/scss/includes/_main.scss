@@ -2,11 +2,12 @@
   margin-left: 24px;
   display: flex;
   flex-direction: column;
+  flex: 0 1 calc(100% - 242px);
 
   &__search {
     width: $width-card;
     height: 44px;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
     position: relative;
 
     [type="submit"] {
@@ -51,11 +52,20 @@
         right: -5px;
       }
     }
+
+    @media (max-width: 736px) {
+      width: 100%;
+    }
   }
 
   &__cards {
     display: flex;
     flex-flow: row wrap;
     margin: 0 -12px;
+  }
+
+  @media (max-width: 736px) {
+    flex: 1 0 100%;
+    margin: 0;
   }
 }

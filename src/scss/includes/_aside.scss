@@ -4,11 +4,22 @@
   display: flex;
   flex-direction: column;
   width: $width-aside;
-  flex: 1 0 $width-aside;
+  flex: 0 1 $width-aside;
 
   &__inner {
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 736px) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 736px) {
+    flex: 1 0 100%;
+    width: 100%;
+    margin-bottom: 24px;
   }
 }
 
@@ -64,5 +75,11 @@
       top: 4px;
       border-radius: 2px;
     }
+  }
+
+  @media (max-width: 736px) {
+    margin-top: 0 !important;
+    flex: 0 1 50%;
+    padding-right: 16px;
   }
 }
